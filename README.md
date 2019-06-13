@@ -46,8 +46,6 @@ This asset provides the scripts to provision a single zone VPC with access to th
 
 - New VPC will be assigned to new resource group `vpc_test_case3` created in given region (ibm_region from variable.tf).
 - You need Administrator access to the given resource_group, inorder to view encrypted password on VSI.
-- [Refer to CLI deployment of windows VSI in VPC and access using RDP](https://github.ibm.com/customer-success/ibmcloud/tree/master/VPC_Phase1/VPC_Scenarios/vpc3)
-- [Refer to UI deployment of windows VSI in VPC and access using RDP](https://github.ibm.com/customer-success/ibmcloud/tree/master/VPC_Phase1/VPC_Scenarios/vpc3/UI)
 
   <!-- - New VPC resources will be assigned the account's default Resource Group. Use the ibmcloud target command to select the desired group and region for the VPC. In our case we want to use group VPC1 instead of default, and locate the VPC in the us-south region. -->
 
