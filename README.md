@@ -8,6 +8,7 @@ This asset provides the scripts to provision a single zone VPC with access to th
 
 1. Active IBM Cloud account with credentials for an IBMid or ServiceID that can deploy infrastructure services.
 2. Access to a public SSH key.
+3. Access the [IBM Cloud provider docker file](https://github.com/IBM-Cloud/terraform-provider-ibm-docker) from the repo to create the latest run time. 
 3. Obtain the variables in the [variables.tf](./infrastructure_code/variables.tf) file required to deploy this pattern
 
    - Add values for iaasapikey, paasapikey, iaasusername for authorization.
