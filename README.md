@@ -44,7 +44,7 @@ This asset provides the scripts to provision a single zone VPC with access to th
 
 ### Notes:
 
-- New VPC will be assigned to new resource group `vpc_test_case3` created in given region (ibm_region deafult value in variable.tf).
+- New VPC will be assigned to new resource group `vpc_test` created in given region (ibm_region deafult value in variable.tf).
 
 - Administrator access is necessary in the resource_group in order to view encrypted password on VSI.
 
