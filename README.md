@@ -16,19 +16,19 @@ This asset provides the scripts to provision a single zone VPC with access to th
 
 ### Steps to Deploy pattern
 
-1. Build Docker to run terraform VPC ibm provider
+1. **Build** Docker to run terraform VPC ibm provider
 
    - docker build -t="terraform-vpc-ibm-docker" . --no-cache
    - docker run -it terraform-vpc-ibm-docker /bin/bash
 
-2. Run Terraform script:
+2. **Run** Terraform script:
 
    - cd terraform-files
    - terraform init
    - terraform plan
    - terraform apply
 
-3. Connect to the instance using Remote Desktop protocol using the floating IP as target. To properly connect,
+3. **Test** by connecting to the instance using Remote Desktop protocol using the floating IP as target. To properly connect,
 
    - Get encrypted password from UI and saved to a file, decode it using:
      ```
@@ -44,8 +44,9 @@ This asset provides the scripts to provision a single zone VPC with access to th
 
 ### Notes:
 
-- New VPC will be assigned to new resource group `vpc_test_case3` created in given region (ibm_region from variable.tf).
-- You need Administrator access to the given resource_group, inorder to view encrypted password on VSI.
+- New VPC will be assigned to new resource group `vpc_test_case3` created in given region (ibm_region deafult value in variable.tf).
+
+- Administrator access is necessary in the resource_group in order to view encrypted password on VSI.
 
   <!-- - New VPC resources will be assigned the account's default Resource Group. Use the ibmcloud target command to select the desired group and region for the VPC. In our case we want to use group VPC1 instead of default, and locate the VPC in the us-south region. -->
 
