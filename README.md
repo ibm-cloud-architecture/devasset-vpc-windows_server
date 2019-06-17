@@ -8,7 +8,6 @@ This asset provides the scripts to provision a single zone VPC with access to th
 
 1. Active IBM Cloud account with credentials for an IBMid or ServiceID that can deploy infrastructure services.
 2. Access to a public SSH key.
-3. Access the [IBM Cloud provider docker file](https://github.com/IBM-Cloud/terraform-provider-ibm-docker) from the repo to create the latest run time. 
 3. Obtain the variables in the [variables.tf](./infrastructure_code/variables.tf) file required to deploy this pattern
 
    - Add values for iaasapikey, paasapikey, iaasusername for authorization.
@@ -45,9 +44,8 @@ This asset provides the scripts to provision a single zone VPC with access to th
 
 ### Notes:
 
-- New VPC will be assigned to new resource group `vpc_test` created in given region (ibm_region deafult value in variable.tf).
-
-- Administrator access is necessary in the resource_group in order to view encrypted password on VSI.
+- New VPC will be assigned to new resource group `vpc_test` created in given region (ibm_region from variable.tf).
+- You need Administrator access to the given resource_group, inorder to view encrypted password on VSI.
 
   <!-- - New VPC resources will be assigned the account's default Resource Group. Use the ibmcloud target command to select the desired group and region for the VPC. In our case we want to use group VPC1 instead of default, and locate the VPC in the us-south region. -->
 
