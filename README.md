@@ -23,7 +23,7 @@ This asset provides the scripts to provision a single zone VPC with access to th
 
 2. **Run** Terraform script:
 
-   - cd terraform-files
+   - cd infrastructure-code
    - terraform init
    - terraform plan
    - terraform apply
