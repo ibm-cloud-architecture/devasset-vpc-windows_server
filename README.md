@@ -1,4 +1,4 @@
-# Deploy Windows server on IBM Cloud Virtual Private Network
+# Deploy Windows server in an IBM Cloud VPC using Terraform
 
 This asset provides the scripts to provision a single zone VPC with access to the internet. Then deplot a Windows virtual service instance into the VPC using Terraform.
 
