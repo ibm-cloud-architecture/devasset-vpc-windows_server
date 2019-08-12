@@ -1,14 +1,14 @@
 # Deploy Windows server in an IBM Cloud VPC using Terraform
 
-This asset provides the scripts to provision a single zone VPC with access to the internet. Then deplot a Windows virtual service instance into the VPC using Terraform.
+This asset provides the scripts to provision a single zone VPC with access to the internet. Then deploy a Windows virtual service instance into the VPC using Terraform.
 
 ![Architecture](imgs/architecture.png)
 
 ### Prerequisites
 
-1. Active IBM Cloud account with credentials for an IBMid or ServiceID that can deploy infrastructure services.
+1. Active IBM Cloud account with credentials for an IBMid or ServiceID that can deploy [VPC infrastructure](https://cloud.ibm.com/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
 2. Access to a public SSH key.
-3. Obtain the variables in the [variables.tf](./infrastructure_code/variables.tf) file required to deploy this pattern
+3. Obtain the variables in the [variables.tf](./infrastructure_code/variables.tf) file required to deploy this pattern.
 
    - Add values for iaasapikey, paasapikey, iaasusername for authorization.
    - Add desired ibm_region, availability_zone and riaas_endpoint endpoint in variable.tf files.
@@ -45,7 +45,7 @@ This asset provides the scripts to provision a single zone VPC with access to th
 ### Notes:
 
 - New VPC will be assigned to new resource group `vpc_test` created in given region (ibm_region from variable.tf).
-- You need Administrator access to the given resource_group, inorder to view encrypted password on VSI.
+- You need Administrator access to the given resource_group, in order to view encrypted password on VSI.
 
   <!-- - New VPC resources will be assigned the account's default Resource Group. Use the ibmcloud target command to select the desired group and region for the VPC. In our case we want to use group VPC1 instead of default, and locate the VPC in the us-south region. -->
 
