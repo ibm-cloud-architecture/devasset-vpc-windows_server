@@ -58,10 +58,10 @@ variable "access-to-any-ip" {
   default     = "0.0.0.0/0"
 }
 
-# OS image template used while provisioning VM. Default image is of Ubuntu.
+# OS image template used while provisioning VM. Default image is of Windows Server 2016.
 variable "image-template-id" {
   description = "Image template id used for VM, use windows image. Use command `ibmcloud is images` to view list of available images."
-  default     = "r006-54e9238a-ffdd-4f90-9742-7424eb2b9ff1"
+  default     = "r006-54e9238a-ffdd-4f90-9742-7424eb2b9ff1"  
 }
 
 # Machine type used while provisioning VM.
