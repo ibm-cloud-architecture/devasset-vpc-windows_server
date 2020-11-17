@@ -2,7 +2,7 @@
 
 This asset provides the scripts to provision a single zone VPC with access to the internet. Then deploy a Windows virtual service instance into the VPC using Terraform.
 
-![Architecture](imgs/architecture.png)
+![Architecture](imgs/devasset-vpc-windows_server.png)
 
 ### Prerequisites
 
