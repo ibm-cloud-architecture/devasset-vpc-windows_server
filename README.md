@@ -16,10 +16,12 @@ This asset provides the scripts to provision a single zone VPC with access to th
 
 ### Steps to Deploy pattern
 
-<1. **Build** Docker to run terraform VPC ibm providerR>
-<
-<   - docker build -t="terraform-vpc-ibm-docker" . --no-cache>
-<   - docker run -it terraform-vpc-ibm-docker /bin/bash>
+<!---
+1. **Build** Docker to run terraform VPC ibm provider:
+
+   - docker build -t="terraform-vpc-ibm-docker" . --no-cache
+   - docker run -it terraform-vpc-ibm-docker /bin/bash
+-->
 
 1. **Run** Terraform script:
 
