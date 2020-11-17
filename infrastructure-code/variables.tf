@@ -2,125 +2,119 @@
 # this architecture. Default values will be used unless changed at 
 # deployment time.
 
-
 # The Infrastructure API Key needed to deploy all resources. 
-variable iaasapikey {
+variable "iaasapikey" {
   description = "The IBM Cloud infrastructure API key"
-  default = ""
+  default     = ""
 }
 
 # The Platform as a Service API Key needed to deploy all resources. 
-variable paasapikey {
+variable "paasapikey" {
   description = "The IBM Cloud platform API key"
-  default = ""
+  default     = ""
 }
 
 # Username for provided API Keys, needed to deploy all resources. 
-variable iaasusername {
- description = "The IBM Cloud infrastructure user name"
- default = ""
+variable "iaasusername" {
+  description = "The IBM Cloud infrastructure user name"
+  default     = ""
 }
 
 # The actual public key that will be created in IBM Cloud and
 # assigned to the virtual servers
-variable ssh_key {
- description = "ssh public key"
- default = ""
+variable "ssh-key" {
+  description = "ssh public key"
+  default     = ""
 }
 
 # The region to deploy architecture.
-variable ibm_region {
- description = "IBM Cloud region"
- default = ""
+variable "ibm-region" {
+  description = "IBM Cloud region"
+  default     = ""
 }
 
 # The zone to deploy the architecture. The tutorial uses a
 # single zone.
-variable availability_zone {
- description = "location to deploy"
- default = "" 
+variable "availability-zone" {
+  description = "location to deploy"
+  default     = ""
 }
-
-# The next generation infrastructure service API endpoint . 
-# It can also be sourced from the RIAAS_ENDPOINT. 
-# Default value: us-south.iaas.cloud.ibm.com
-variable  riaas_endpoint {
-  description = "infrastructure service API endpoint"
-  default= ""
-}
-
 
 # Resource group to which these resources will belong 
-variable resource_group {
+variable "resource-group" {
   description = "resource group"
-  default = "vpc-test"  
+  default     = "vpc-test"
 }
 
 # Address Prefix used for creating VPC.
-variable address_prefix {
+variable "address-prefix" {
   description = "address prefix used in vpc"
-  default = "10.10.13.0/24"
+  default     = "172.21.0.0/21"
 }
 
 # Used by Security Group to give access to given resource.
-variable access_to_any_ip {
+variable "access-to-any-ip" {
   description = "Give access to any ip"
-  default = "0.0.0.0/0"
+  default     = "0.0.0.0/0"
 }
 
 # OS image template used while provisioning VM. Default image is of Ubuntu.
-variable  image_template_id {
+variable "image-template-id" {
   description = "Image template id used for VM, use windows image. Use command `ibmcloud is images` to view list of available images."
-  default = "b45450d3-1a17-2226-c518-a8ad0a75f5f8"
+  default     = "r006-54e9238a-ffdd-4f90-9742-7424eb2b9ff1"
 }
 
 # Machine type used while provisioning VM.
-variable machine_type {
+variable "machine-type" {
   description = "VM machine type"
-  default = "cc1-2x4"
+  default     = "cx2-2x4"
 }
 
 # Port speed used while provisioning VM.
-variable port_speed  {
+variable "port-speed" {
   description = "vm port speed"
-  default = "1000"
+  default     = "1000"
 }
 
 # CIDR value for subnet.
-variable subnet_cidr {
+variable "subnet-cidr" {
   description = "Used for creating subnet with given cidr"
-  default = "10.243.132.0/24"
+  default     = "172.21.0.0/24"
 }
 
-variable security_group_port {
+variable "security-group-port" {
   description = "Used for adding rule for security group"
-  default = 3389
+  default     = 3389
 }
+
 # CIDR value for ACL ingress/egress.
-variable ACLsource_ingress {
+variable "ACLsource-ingress" {
   description = "Used for creating ACL source ingress cidr"
-  default = "0.0.0.0/0"
+  default     = "0.0.0.0/0"
 }
-variable ACLdest_ingress {
+
+variable "ACLdest-ingress" {
   description = "Used for creating ACL destination ingress cidr"
-  default = "0.0.0.0/0"
+  default     = "0.0.0.0/0"
 }
-variable ACLsource_egress {
+
+variable "ACLsource-egress" {
   description = "Used for creating ACL source egress cidr"
-  default = "0.0.0.0/0"
+  default     = "0.0.0.0/0"
 }
-variable ACLdest_egress {
+
+variable "ACLdest-egress" {
   description = "Used for creating ACL destination egress cidr"
-  default = "0.0.0.0/0"
+  default     = "0.0.0.0/0"
 }
 
-variable tcp_max_port {
+variable "tcp-max-port" {
   description = "The highest port in the range of ports to be matched"
-  default = 65535
+  default     = 65535
 }
 
-variable tcp_min_port {
+variable "tcp-min-port" {
   description = "The highest port in the range of ports to be matched"
-  default = 1
+  default     = 1
 }
 

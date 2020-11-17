@@ -6,7 +6,7 @@ This asset provides the scripts to provision a single zone VPC with access to th
 
 ### Prerequisites
 
-1. Active IBM Cloud account with credentials for an IBMid or ServiceID that can deploy [VPC infrastructure](https://cloud.ibm.com/docs/vpc-on-classic?topic=vpc-on-classic-getting-started).
+1. Active IBM Cloud account with credentials for an IBMid or ServiceID that can deploy [VPC infrastructure](https://cloud.ibm.com/docs/vpc).
 2. Access to a public SSH key.
 3. Obtain the variables in the [variables.tf](./infrastructure_code/variables.tf) file required to deploy this pattern.
 
@@ -16,12 +16,12 @@ This asset provides the scripts to provision a single zone VPC with access to th
 
 ### Steps to Deploy pattern
 
-1. **Build** Docker to run terraform VPC ibm provider
+#1. **Build** Docker to run terraform VPC ibm provider
+#
+#   - docker build -t="terraform-vpc-ibm-docker" . --no-cache
+#   - docker run -it terraform-vpc-ibm-docker /bin/bash
 
-   - docker build -t="terraform-vpc-ibm-docker" . --no-cache
-   - docker run -it terraform-vpc-ibm-docker /bin/bash
-
-2. **Run** Terraform script:
+1. **Run** Terraform script:
 
    - cd infrastructure-code
    - terraform init
