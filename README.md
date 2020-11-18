@@ -8,7 +8,8 @@ This asset provides the scripts to provision a single zone VPC with access to th
 
 1. Active IBM Cloud account with credentials for an IBMid or ServiceID that can deploy [VPC infrastructure](https://cloud.ibm.com/docs/vpc).
 2. Access to a public SSH key.
-3. Obtain the variables in the [variables.tf](./infrastructure_code/variables.tf) file required to deploy this pattern.
+3. Update the versions of Terraform and IBM Cloud Terraform Provider in the [versions.tf](./infrastructure_code/versions.tf) file.
+4. Review the variables in the [variables.tf](./infrastructure_code/variables.tf) file required to deploy this pattern.
 
    - Add values for iaasapikey, paasapikey, iaasusername for authorization.
    - Add desired ibm_region, availability_zone and riaas_endpoint endpoint in variable.tf files.
