@@ -47,7 +47,7 @@ This asset provides the scripts to provision a single zone VPC with access to th
 
 ### Notes:
 
-- New VPC will be assigned to new resource group `vpc_test` created in given region (ibm_region from variable.tf).
+- New VPC will be assigned to new resource group `vpc_test` created in given region (ibm-region from variables.tf).
 - You need Administrator access to the given resource_group, in order to view encrypted password on VSI.
 
   <!-- - New VPC resources will be assigned the account's default Resource Group. Use the ibmcloud target command to select the desired group and region for the VPC. In our case we want to use group VPC1 instead of default, and locate the VPC in the us-south region. -->
